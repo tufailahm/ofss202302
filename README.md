@@ -1,3 +1,10 @@
+Oracle 19c Material Link : https://drive.google.com/file/d/1GTJWiPYNOLL7Gi4q3UzUpzypT7r4iKCn/view?usp=sharing
+
+Unix/Linux Material Link :
+https://drive.google.com/file/d/131ES9ut0tz__Gnh6RkYZoEZQfI2DE-hi/view?usp=sharing
+https://drive.google.com/file/d/15zycTlzJ4D3h5BWm5gC25UUa2gDArXyc/view?usp=sharing
+
+
 https://drive.google.com/file/d/1dlh5BQrFw7nwQ89nl3JibpePFbT5Yrql/view?usp=drive_link
 
 
