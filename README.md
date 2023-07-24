@@ -4,7 +4,7 @@ Unix/Linux Material Link :
 https://drive.google.com/file/d/131ES9ut0tz__Gnh6RkYZoEZQfI2DE-hi/view?usp=sharing
 https://drive.google.com/file/d/15zycTlzJ4D3h5BWm5gC25UUa2gDArXyc/view?usp=sharing
 
-
+Core Java Link :https://drive.google.com/file/d/1UHv-KkHwKBFSs0RnCIJiFtnDOJKBHNuU/view?usp=sharing
 
 https://dbeaver.io/files/dbeaver-ce-latest-x86_64-setup.exe
 
