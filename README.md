@@ -5,10 +5,6 @@ https://drive.google.com/file/d/131ES9ut0tz__Gnh6RkYZoEZQfI2DE-hi/view?usp=shari
 https://drive.google.com/file/d/15zycTlzJ4D3h5BWm5gC25UUa2gDArXyc/view?usp=sharing
 
 
-https://drive.google.com/file/d/1dlh5BQrFw7nwQ89nl3JibpePFbT5Yrql/view?usp=drive_link
-
-
-https://github.com/tufailahm/ofss202302
 
 https://dbeaver.io/files/dbeaver-ce-latest-x86_64-setup.exe
 
