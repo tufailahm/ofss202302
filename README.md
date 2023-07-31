@@ -1,3 +1,7 @@
+SE Material Link:
+
+https://drive.google.com/file/d/1FjuSJ4Iua1mNCiiVMi0rN5aOiyzWkE3y/view?usp=sharing
+
 Oracle 19c Material Link : https://drive.google.com/file/d/1GTJWiPYNOLL7Gi4q3UzUpzypT7r4iKCn/view?usp=sharing
 
 Unix/Linux Material Link :
