@@ -1,46 +1,47 @@
 package com.training.pms.marvel.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class PrintNameController
+ * Servlet implementation class LogoutController
  */
-public class PrintNameController extends HttpServlet {
+public class LogoutController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public PrintNameController() {
+    public LogoutController() {
         super();
         // TODO Auto-generated constructor stub
     }
 
 	/**
+	 * @see Servlet#init(ServletConfig)
+	 */
+    int counter=0;
+	public void init(ServletConfig config) throws ServletException {
+		counter = 1000;
+	}
+
+	/**
+	 * @see Servlet#destroy()
+	 */
+	public void destroy() {
+			counter =0;
+	}
+
+	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String uname = request.getParameter("name");
-		
-		if(uname == null) {
-			uname = "Mohammad Tufail Ahmed";
-		}
-		response.setContentType("text/html");
-		PrintWriter pw = response.getWriter();
-		pw.println("<html><body>");
-		
-		for(int i=1;i<=5;i++) {
-			pw.println("<h1>"+uname+"</h1>");
-		}
-		pw.println("<br/><a href=name.html>Try Again</a>");
-
+		counter++;
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**

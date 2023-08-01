@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -28,8 +29,30 @@ public class LoginController extends HttpServlet {
 		PrintWriter pw = response.getWriter();
 		response.setContentType("text/html");
 		
-		String un = request.getParameter("username");
+		String un = request.getParameter("username");		//Tarun
 		String pass = request.getParameter("password");
+		
+		Cookie allCookie[] = request.getCookies();
+		boolean visited = false;
+		for(Cookie c:allCookie)
+		{
+				if(c.getName().equals(un))
+				{
+						visited = true;
+						break;
+				}
+		}
+		if(visited) {
+			pw.println("You already visited our website. ");
+
+		}
+		else
+		{
+			pw.println("You have visited our website for the first time");
+			Cookie cookie = new Cookie(un, un);			//Tarun	- Tarun
+			response.addCookie(cookie);
+			
+		}
 		
 		HttpSession session = request.getSession();
 		session.setAttribute("usern", un);
@@ -37,13 +60,12 @@ public class LoginController extends HttpServlet {
 		
 		//code to check the validity of the user
 		//we are assuming the valid user
-		pw.println("1. Welcome in LoginController and you are validated "+un);
 		//pw.print("Your password is :"+pass);
 		//pw.print("<br/><br/><br/><a href=DashboardController>Dashboard</a>");
 		if(un.startsWith("T"))
 		{
 			RequestDispatcher rd = request.getRequestDispatcher("DashboardController");
-			rd.forward(request, 	response);
+			rd.include(request, 	response);
 		}
 		else if(un.equalsIgnoreCase("utkarsh"))
 		{

@@ -25,9 +25,6 @@ public class CheckoutController extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		String username = (String) session.getAttribute("usern");
@@ -36,9 +33,15 @@ public class CheckoutController extends HttpServlet {
 		PrintWriter pw = response.getWriter();
 		response.setContentType("text/html");
 		
-		pw.println("Thanks Mr/Ms. "+username + " for shopping with us");
-		pw.print("Your product :"+product.getProductName()+ " will get delivered to you ");
-		pw.println("Here is the product details : "+product);
+		pw.println("<h2>Thanks Mr/Ms. "+username + " for shopping with us<h2><br/><br/>");
+		pw.print("<h2>Your product :"+product.getProductName()+ " will get delivered to you </h2>");
+		pw.println("<h2>Here is the product details : "+product+"</h2>");
+		
+		
+		pw.println("<br/><br/><br/><a href=bill.jsp>Your bill</a>");
+		
+		pw.println("<br/><br/><br/><a href=index.jsp>Home</a>");
+
 
 	}
 

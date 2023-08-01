@@ -32,7 +32,7 @@ public class DashboardController extends HttpServlet {
 		pw.println("<h2>Welcome Dashboard Catalogue , "+un);
 		pw.println("<h2>Your Login Time is : "+ new java.util.Date());
 		pw.println("<h2>Here is your dashbaord");
-		pw.println("<a href=product.html>Add Product</a>");
+		pw.println("<br/><br/><br/><h2><a href=product.html>Add Product</a>");
 
 
 		pw.println("<br/><br/><br/><a href=index.jsp>Home</a>");
