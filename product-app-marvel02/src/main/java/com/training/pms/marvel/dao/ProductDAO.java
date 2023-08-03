@@ -54,6 +54,10 @@ public class ProductDAO {
 		return products;
 	}
 	
+	
+	
+	
+	
 	public List<Product> showAllProducts()
 	{
 		List<Product> products = new ArrayList<Product>();

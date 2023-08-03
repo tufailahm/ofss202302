@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.training.pms.marvel.dao.UserDAO;
+
 /**
  * Servlet implementation class LoginController
  */
@@ -33,49 +35,49 @@ public class LoginController extends HttpServlet {
 		String un = request.getParameter("username");		//Tarun
 		String pass = request.getParameter("password");
 		
-		Cookie allCookie[] = request.getCookies();
-		boolean visited = false;
-		for(Cookie c:allCookie)
+		UserDAO dao = new UserDAO();
+		if(dao.checkValidUser(un, pass))
 		{
-				if(c.getName().equals(un))
-				{
-						visited = true;
-						break;
-				}
-		}
-		if(visited) {
-			pw.println("You already visited our website. ");
+			Cookie allCookie[] = request.getCookies();
+			boolean visited = false;
+			for(Cookie c:allCookie)
+			{
+					if(c.getName().equals(un))
+					{
+							visited = true;
+							break;
+					}
+			}
+			if(visited) {
+				pw.println("You already visited our website. ");
 
+			}
+			else
+			{
+				pw.println("You have visited our website for the first time");
+				Cookie cookie = new Cookie(un, un);			//Tarun	- Tarun
+				response.addCookie(cookie);
+				
+			}
+			
+			HttpSession session = request.getSession();
+			session.setAttribute("usern", un);
+			
+			
+			//code to check the validity of the user
+			//we are assuming the valid user
+			//pw.print("Your password is :"+pass);
+			//pw.print("<br/><br/><br/><a href=DashboardController>Dashboard</a>");
+
+				RequestDispatcher rd = request.getRequestDispatcher("DashboardController");
+				rd.include(request, 	response);
+		
 		}
 		else
 		{
-			pw.println("You have visited our website for the first time");
-			Cookie cookie = new Cookie(un, un);			//Tarun	- Tarun
-			response.addCookie(cookie);
-			
+			pw.println("Invalid Username/password");
 		}
-		
-		HttpSession session = request.getSession();
-		session.setAttribute("usern", un);
-		
-		
-		//code to check the validity of the user
-		//we are assuming the valid user
-		//pw.print("Your password is :"+pass);
-		//pw.print("<br/><br/><br/><a href=DashboardController>Dashboard</a>");
-		if(un.startsWith("T"))
-		{
-			RequestDispatcher rd = request.getRequestDispatcher("DashboardController");
-			rd.include(request, 	response);
-		}
-		else if(un.equalsIgnoreCase("utkarsh"))
-		{
-			RequestDispatcher rd = request.getRequestDispatcher("AdminDashboardController");
-			rd.include(request, response);
-		}
-		else {
-			response.sendRedirect("login.html");
-		}
+	
 	}
 
 	/**
