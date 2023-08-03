@@ -46,7 +46,7 @@ button {
 </head>    
 <body>    
     <center> <h1> Product  Form </h1> </center>   
-    <form action="ProductValidateController" method="post">  
+    <form action="ProductValidateController" method="get">  
         <div class="container">   
             <label>Product Id : </label>   
             <input type="text" placeholder="Enter product id" name="productId" required>  
@@ -56,8 +56,14 @@ button {
             <input type="text" placeholder="Enter quantity on hand" name="quantityOnHand" required>
             <label>Price : </label>   
             <input type="text" placeholder="Enter price" name="price" required>    
+         
             <button type="submit">Add Product</button>   
-			<button type="submit" formaction="ProductDeleteController">Delete Product</button> 
+			<button type="submit" formaction="ProductDeleteController" name="operation" value="delete">Delete Product</button> 
+			<button type="submit" formaction="ProductDeleteController" name="operation" value="update">Update Product</button>   
+			<button type="submit" formaction="ProductDeleteController" name="operation" value="search">Search Product By Product Name</button>
+<button type="submit" formaction="ProductDeleteController" name="operation" value="shubhammadoperation">Search Product By Product Name</button>   
+			   
+			
         </div>   
     </form>
     <br/>
