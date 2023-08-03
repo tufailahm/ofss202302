@@ -57,13 +57,15 @@ button {
             <label>Price : </label>   
             <input type="text" placeholder="Enter price" name="price" required>    
             <button type="submit">Add Product</button>   
-          
+			<button type="submit" formaction="ProductDeleteController">Delete Product</button> 
         </div>   
     </form>
     <br/>
     <br/>
     <br/>
-    <a href="viewAllProduct.jsp">View All Products</a> 
+    <a href="viewAllProduct.jsp">View All Products</a> |
+     <a href="ProductFetchController">View All Products (JSTL) </a> 
+    
     <br/>
     <a href="index.jsp">Home</a>    
 </body>     

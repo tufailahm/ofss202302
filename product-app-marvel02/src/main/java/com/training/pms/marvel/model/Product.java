@@ -2,15 +2,48 @@ package com.training.pms.marvel.model;
 
 import java.util.Objects;
 
-public class Product {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Parameter;
+
+@Entity
+@Table(name = "products")
+
+public class Product {
+/*
+ * 1st approach
+	//No need to create any sequence in oracle , it will auto increment 1  and starts from 1
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_post")
+	@SequenceGenerator(name = "seq_post", allocationSize = 1)
 	private int productId;
-	private String productName;
-	private int quantityOnHand;
-	private int price;
+
+*/
+	//2nd approach
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_post")
+	@SequenceGenerator(sequenceName = "product_seq" , allocationSize = 1, name = "seq_post")
+	private int productId;
 	
+	
+	@Column
+	private String productName;
+
+	@Column
+	private int quantityOnHand;
+
+	@Column
+	private int price;
+
 	public Product() {
-		// TODO Auto-generated constructor stub
+
 	}
 
 	public Product(int productId, String productName, int quantityOnHand, int price) {
@@ -76,7 +109,5 @@ public class Product {
 		return "Product [productId=" + productId + ", productName=" + productName + ", quantityOnHand=" + quantityOnHand
 				+ ", price=" + price + "]";
 	}
-	
-	
 
 }

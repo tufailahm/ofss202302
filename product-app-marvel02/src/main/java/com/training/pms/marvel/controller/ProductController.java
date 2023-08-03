@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.training.pms.marvel.dao.ProductDAO;
 import com.training.pms.marvel.model.Product;
 
 /**
@@ -45,7 +46,11 @@ public class ProductController extends HttpServlet {
 		int newPrice = (int) (price + price * 0.18);
 		product.setPrice(newPrice);
 		
-		//product 		
+		//product 
+		//save the data 
+		ProductDAO dao = new ProductDAO();
+		dao.saveProduct(product);
+		
 		HttpSession session = request.getSession();
 		session.setAttribute("productData", product);
 		

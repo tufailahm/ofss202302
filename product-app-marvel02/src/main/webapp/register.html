@@ -45,19 +45,19 @@ button {
 </style>   
 </head>    
 <body>    
-    <center> <h1> Product Login Form </h1> </center>   
-    <form action="LoginController" method="post">  
-        <div class="container">   
+    <center> <h1> Registration Form for New User </h1> </center>   
+    <form action="RegisterController" >  
+        <div class="container"> 
+        <label>First name : </label>   
+            <input type="text" placeholder="Enter first name" name="firstname" required>    
+                    <label>Last name : </label>   
+            <input type="text" placeholder="Enter last name" name="lastname" required>   
             <label>Username : </label>   
             <input type="text" placeholder="Enter Username" name="username" required>  
             <label>Password : </label>   
             <input type="password" placeholder="Enter Password" name="password" required>  
-            <button type="submit">Login</button>   
-            <input type="checkbox" checked="checked"> Remember me   
-            <button type="button" class="cancelbtn"> Cancel</button>   
-            Forgot <a href="#"> password? </a>   
-                        New User ??  <a href="register.html"> Register Here  </a>   
-            
+            <button type="submit">Register</button>   
+            Already Registered ? <a href="login.html"> Login Here </a>   
         </div>   
     </form> 
     <br/>

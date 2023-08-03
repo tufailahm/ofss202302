@@ -1,7 +1,7 @@
 <%@page import="com.training.pms.marvel.utility.ProductData"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
-<%@page import="com.training.pms.marvel.model.Product"%>
+<%@page import="com.training.pms.marvel.model.Product"  isELIgnored="false" %>
 <html>
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -9,11 +9,14 @@
 <body>
 <center><h2>Product Details</h2></center>
 <hr/>
+	${2+5}
 	<%!Product product = new Product();%>
 	<%
 	List<Product> products = ProductData.getAllProducts();
 	Iterator<Product> iterator = products.iterator();
 	%>
+	
+	
 	<table border="2" cellspacing="10" cellpadding="10" align="center">
 		<tr>
 			<th>Product Id</th>

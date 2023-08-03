@@ -1,0 +1,31 @@
+<persistence
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+	<persistence-unit name="ofssresource"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<class>com.training.pms.marvel.model.Product</class>
+		<class>com.training.pms.marvel.model.UserDetails</class>
+		<properties>
+			    <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.driver.OracleDriver" />
+      <property name="javax.persistence.jdbc.url"    value="jdbc:oracle:thin:@localhost:1521:ORCL" />
+      <property name="javax.persistence.jdbc.user" value="harry" />
+      <property name="javax.persistence.jdbc.password" value="porter" />
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.OracleDialect" />
+                  
+                        <property name="hibernate.hbm2ddl.auto" value="update" />
+            
+            
+            <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="eclipselink.ddl-generation"
+				value="drop-and-create-tables" />
+			<property name="eclipselink.ddl-generation"
+				value="create-or-extend-tables" />
+			<property name="eclipselink.ddl-generation.output-mode"
+				value="galaxe" />
+		</properties>
+
+	</persistence-unit>
+</persistence>
