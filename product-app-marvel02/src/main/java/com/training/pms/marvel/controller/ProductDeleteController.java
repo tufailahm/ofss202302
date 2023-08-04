@@ -56,7 +56,7 @@ public class ProductDeleteController extends HttpServlet {
 			if (quantityOnHand <= 20) {
 				ProductJMSSender jmsSender = new ProductJMSSender();
 				String result = jmsSender
-						.sendProductOutOfStockMessage("Product : " + productName + " is going to be out of stock soon");
+						.sendProductOutOfStockMessage("Product : " + productName + " is going to be out of stock soon qoh is : "+quantityOnHand);
 				session.setAttribute("message", result);
 			}
 		} else if (operation.equals("search")) {

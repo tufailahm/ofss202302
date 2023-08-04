@@ -42,6 +42,8 @@ public class ProductJMSSender {
 				
 				textMessage.setText(msg);
 				
+				producer.send(textMessage);
+				
 				System.out.println("Your message has been sent successfully !!");
 			} catch (NamingException e) {
 				// TODO Auto-generated catch block
@@ -49,6 +51,17 @@ public class ProductJMSSender {
 			} catch (JMSException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+			}
+			finally
+			{
+				try {
+					session.close();
+					producer.close();
+					connection.close();
+				} catch (JMSException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 			
 			return "Your message has been sent successfully !!";
