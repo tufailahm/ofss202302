@@ -75,7 +75,9 @@ public class LoginController extends HttpServlet {
 		}
 		else
 		{
-			pw.println("Invalid Username/password");
+			pw.println("<h2><font color=red>Invalid Username/password</font>");
+			pw.println("<h2><a href=login.html>Try Again with Valid Credentials</a>");
+
 		}
 	
 	}
