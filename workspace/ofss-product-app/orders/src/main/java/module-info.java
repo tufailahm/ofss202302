@@ -1,0 +1,3 @@
+module orders {
+	requires reviews;
+}

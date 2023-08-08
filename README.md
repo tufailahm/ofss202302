@@ -16,11 +16,9 @@ Core Java Link :https://drive.google.com/file/d/1UHv-KkHwKBFSs0RnCIJiFtnDOJKBHNu
 https://dbeaver.io/files/dbeaver-ce-latest-x86_64-setup.exe
 
 
-SQL> alter session set "_ORACLE_SCRIPT"=true;
 
-Session altered.
 
-SQL> CREATE USER harry IDENTIFIED BY porter  DEFAULT TABLESPACE "USERS" TEMPORARY TABLESPACE "TEMP";
+SQL> CREATE USER harry IDENTIFIED BY porter  "USERS" TEMPORARY TABLESPACE "TEMP";
 
 User created.
 

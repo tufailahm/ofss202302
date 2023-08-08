@@ -1,0 +1,79 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Login Page </title>  
+<style>   
+Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: pink;  
+}  
+button {   
+       background-color: black;   
+       width: 100%;  
+        color: orange;   
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;   
+         }   
+ form {   
+        border: 3px solid #f1f1f1;   
+    }   
+ input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid green;   
+        box-sizing: border-box;   
+    }  
+ button:hover {   
+        opacity: 0.7;   
+    }   
+  .cancelbtn {   
+        width: auto;   
+        padding: 10px 18px;  
+        margin: 10px 5px;  
+    }   
+        
+     
+ .container {   
+        padding: 25px;   
+        background-color: lightblue;  
+    }   
+</style>   
+</head>    
+<body>    
+    <center> <h1> Product  Form </h1> </center>   
+    <form action="ProductValidateController" method="get">  
+        <div class="container">   
+            <label>Product Id : </label>   
+            <input type="text" placeholder="Enter product id" name="productId" required>  
+           <label>Product Name : </label>   
+            <input type="text" placeholder="Enter product name" name="productName" required>  
+             <label>Quantity On Hand : </label>   
+            <input type="text" placeholder="Enter quantity on hand" name="quantityOnHand" required>
+            <label>Price : </label>   
+            <input type="text" placeholder="Enter price" name="price" required>    
+         
+            <button type="submit">Add Product</button>   
+			<button type="submit" formaction="ProductDeleteController" name="operation" value="delete">Delete Product</button> 
+			<button type="submit" formaction="ProductDeleteController" name="operation" value="update">Update Product</button>   
+			<button type="submit" formaction="ProductDeleteController" name="operation" value="search">Search Product By Product Name</button>
+<button type="submit" formaction="ProductDeleteController" name="operation" value="shubhammadoperation">Search Product By Product Name</button>   
+			   
+			
+        </div>   
+    </form>
+    <br/>
+    <br/>
+    <br/>
+    <a href="viewAllProduct.jsp">View All Products</a> |
+     <a href="ProductFetchController">View All Products (JSTL) </a> 
+        <a href="viewAllProduct.jsp">New Product Information</a> |
+    
+    <br/>
+    <a href="index.jsp">Home</a>    
+</body>     
+</html>  

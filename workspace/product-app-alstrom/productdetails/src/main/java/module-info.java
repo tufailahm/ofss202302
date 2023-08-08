@@ -1,0 +1,4 @@
+module productdetails {
+	requires productlist;
+
+}
