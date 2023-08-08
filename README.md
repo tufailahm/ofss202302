@@ -1,3 +1,6 @@
+EE & Spring Core/MVC Material Link
+https://drive.google.com/file/d/1icoOgY_jmwFTSRA-wvOCCez7n_MuG9QQ/view?usp=sharing
+
 SE Material Link:
 
 https://drive.google.com/file/d/1FjuSJ4Iua1mNCiiVMi0rN5aOiyzWkE3y/view?usp=sharing
